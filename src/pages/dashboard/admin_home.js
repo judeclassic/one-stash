@@ -39,7 +39,7 @@ constructor (props){
 
             const dataObj = new FormData()
             dataObj.append('file_name', this.state.file_name)
-            dataObj.append('file_folder', this.state.file_folder)
+            dataObj.append('file', this.state.file_folder)
             dataObj.append('user_id', this.state.user.id)
             
             const res = await callApi('post', apiConfigs.apiUp+'upload', dataObj)
